@@ -2,6 +2,7 @@ const classifier = knnClassifier.create();
 const webcamElement = document.getElementById('webcam');
 let net;
 
+/*
 // this is for uploading images
 async function app() {
   console.log('Loading mobilenet..');
@@ -15,8 +16,8 @@ async function app() {
   const result = await net.classify(imgEl);
   console.log(result);
 }
-
-/* this is for webcam always on
+*/
+// this is for webcam always on
 async function app() {
   console.log('Loading mobilenet..');
 
@@ -38,7 +39,6 @@ async function app() {
     await tf.nextFrame();
   }
 }
-*/
 
 /* this is for custom training with 3 classifications
 async function app() {
@@ -63,7 +63,7 @@ async function app() {
 */
 
   // When clicking a button, add an example for that class.
-  document.getElementById('class-a').addEventListener('click', () => addExample(0));
+/*  document.getElementById('class-a').addEventListener('click', () => addExample(0));
   document.getElementById('class-b').addEventListener('click', () => addExample(1));
   document.getElementById('class-c').addEventListener('click', () => addExample(2));
 
@@ -84,7 +84,7 @@ async function app() {
     await tf.nextFrame();
   }
 }
-
+*/
 async function setupWebcam() {
   return new Promise((resolve, reject) => {
     const navigatorAny = navigator;
